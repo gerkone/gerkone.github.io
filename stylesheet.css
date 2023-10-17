@@ -97,7 +97,7 @@ a {
   max-width:40%
 }
 
-.pfp-mobile {
+.pfpmobile {
   display: none;
 }
 
@@ -226,7 +226,7 @@ span.highlight {
     order: 1;
     display: block;
   }
-  .pfp-mobile{
+  .pfpmobile{
     order: 2;
     width: 80%;
     display: block;

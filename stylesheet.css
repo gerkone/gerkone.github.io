@@ -80,14 +80,38 @@ th,
 tr,
 a {
   font-family: 'Courier New', Courier, monospace;
-  font-size: 13px
+  font-size: 13.5px
+}
+
+.refs {
+  text-align: center
+}
+
+.name {
+  text-align: center
+}
+
+.pfp {
+  padding:2.5%;
+  width:40%;
+  max-width:40%
+}
+
+.pfp-mobile {
+  display: none;
+}
+
+.main {
+  padding:2.5%;
+  width:63%;
+  vertical-align:middle;
 }
 
 body {
   background-color: #cccccc;
   opacity: 1.0;
-  background-image: radial-gradient(#cccccc 1.5px, #bdbdbd 0.5px);
-  background-size: 6px 6px;
+  background-image: radial-gradient(#dbdbdb 1px, #cacaca 1px);
+  background-size: 10px 10px;
 }
 
 p {
@@ -156,11 +180,12 @@ span.highlight {
 .column {
   float: left;
   width: 50%;
-  padding: 0 10px;
+  padding: 0 8px;
 }
 
 .row {
-  margin: 0 -5px;
+  margin: 0 -4px;
+  padding: 16px 0;
 }
 
 .row:after {
@@ -169,24 +194,59 @@ span.highlight {
   clear: both;
 }
 
-/* Responsive columns */
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-    display: block;
-    margin-bottom: 20px;
-  }
-}
-
 /* Style the counter cards */
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.2);
   padding: 16px;
   margin: 16px 0;
   text-align: center;
   background-color: #e6e6e6;
+  cursor: pointer;
 }
 
 .card:hover {
   background-color: #ffe8ce;
+}
+
+@media screen and (max-width: 600px) {
+  /* Responsive columns */
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: -16px;
+  }
+  .row {
+    margin-top: -16px;
+  }
+  /* hide original pfp */
+  .pfp {
+    display: none;
+  }
+  .name{
+    order: 1;
+    display: block;
+  }
+  .pfp-mobile{
+    order: 2;
+    width: 80%;
+    display: block;
+    margin: auto;
+  }
+  .bio{
+    order: 3;
+    display: block;
+  }
+  .refs {
+    order: 4;
+    display: block;
+  }
+  .intro {
+    display: flex;
+    flex-flow: column;
+  }
+  .main {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

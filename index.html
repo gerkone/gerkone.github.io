@@ -20,13 +20,18 @@
 
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           <tr style="padding:0px">
-            <td style="padding:2.5%;width:63%;vertical-align:middle">
-              <p style="text-align:center">
+            <td class="main">
+              <p class="name">
                 <name>Gianluca Galletti</name>
               </p>
-              <p>
+              <span class="pfp-mobile">
+                <a href="images/profile.jpg">
+                  <img style="width:100%;max-width:100%;border-radius:50%;" alt="profile photo" src="images/profile.jpg">
+                </a>
+              </span>
+              <p class="bio">
                 I'm a last semester Informatics Master student at <a href="https://www.cit.tum.de/en/"> TU Munich</a>.
-                I got my Bachelor at the University of Bologna in Italy, my hometown.
+                Before that I got my Bachelor at the University of Bologna, my birthplace and hometown.
                 <br><br>
                 After my Master (mid 2024) I'll be <b>looking for a PhD position</b>,
                 ideally in the fields of Machine Learning for Physics and Dynamic Processes, Reinforcement Learning or 3D Computer Vision.
@@ -35,17 +40,16 @@
               </p>
               <p>
               </p>
-              <p style="text-align:center">
+              <p class="refs">
                 <a href="https://github.com/gerkone/">Github</a>&nbsp/&nbsp
                 <a href="https://scholar.google.com/citations?user=EwdSrbsAAAAJ&hl=en">Google Scholar</a> &nbsp/&nbsp
                 <a href="assets/galletti_CV.pdf">CV</a>&nbsp/&nbsp
-                <a href="mailto:ggalletti@tutanota.com">Email</a>&nbsp/&nbsp
-                <a href="https://twitter.com/ggalletti_">Twitter</a>
+                <a href="mailto:ggalletti@tutanota.com">Email</a>
+                <!-- &nbsp/&nbsp -->
+                <!-- <a href="https://twitter.com/ggalletti_">Twitter</a> -->
               </p>
-
-
             </td>
-            <td style="padding:2.5%;width:40%;max-width:40%">
+            <td class="pfp">
               <a href="images/profile.jpg">
                 <img style="width:100%;max-width:100%;border-radius:50%;" alt="profile photo" src="images/profile.jpg" class="hoverZoomLink" onmouseover="this.src='images/triceracop.jpg';" onmouseout="this.src='images/profile.jpg';">
               </a>
@@ -96,7 +100,7 @@
                 <p>
                   <div class="row">
                     <div class="column">
-                      <div class="card">
+                      <div class="card" onclick="window.location='https://github.com/tumaer/lagrangebench'">
                         <h3>LagrangeBench</h3>
                         <a class="github-button" href="https://github.com/tumaer/lagrangebench" data-show-count="true" aria-label="Star lagrangebench on GitHub"><code>lagrangebench</code></a><br>
                         <p>
@@ -104,7 +108,7 @@
                           It provides a variety of models, datasets and utilities to train and evaluate particle-based approaches.
                         </p>
                       </div>
-                      <div class="card">
+                      <div class="card" onclick="window.location='https://github.com/gerkone/pytorcs-docker'">
                         <h3>pyTORCS</h3>
                         <a class="github-button" href="https://github.com/gerkone/pytorcs-docker" data-show-count="true" aria-label="Star gerkone/pyTORCS-docker on GitHub"><code>pyTORCS-docker</code></a><br>
                         <p>

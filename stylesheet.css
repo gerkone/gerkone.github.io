@@ -124,9 +124,12 @@ body {
 p {
   text-align: justify;
   word-spacing: -2px;
+  overflow-wrap: anywhere;
   word-break: normal;
   hyphens: auto;
   -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
 }
 
 strong {

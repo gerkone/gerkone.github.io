@@ -224,7 +224,7 @@ span.highlight {
   margin: 16px 0;
   text-align: center;
   background-color: #e6e6e6;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 .card:hover {

@@ -3,13 +3,11 @@
 
   <title>Gianluca Galletti</title>
   
-  <meta name="author" content="Gianluca Galletti">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
   <link rel="icon" type="image/png" href="images/triceracop_icon.jpg">
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Gianluca Galletti">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
   <script async defer src="https://buttons.github.io/buttons.js"></script>
 
@@ -20,6 +18,7 @@
     <tr style="padding:0px">
       <td style="padding:0px">
 
+        <!-- bio -->
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           <tr style="padding:0px">
             <td class="main">
@@ -30,21 +29,21 @@
                 <img style="width:100%;max-width:100%;border-radius:50%;" alt="profile photo" src="images/profile.jpg">
               </span>
               <p class="bio">
-                I'm a PhD student in Brandstetter's group at JKU Linz (Austria), working on
-                large-scale turbulent physical simulations with machine learning.
+                I'm a first year PhD student in Johannes Brandstetter's group at JKU Linz (Austria), working on
+                large-scale turbulent physical simulations with machine learning and generative modeling.
                 <br><br>
                 I got my Master's degree from TU Munich and my Bachelor's degree at the
                 University of Bologna, my birthplace and hometown.
                 <br><br>
-                I have been practicing traditional archery for 5 years. I also enjoy
-                weightlifting, car racing, hiking, and sometimes climbing.
+                I have been practicing traditional archery for 5 years. I also run,
+                and enjoy motorsports, as well as hiking and sometimes climbing.
               </p>
               <p>
               </p>
               <p class="refs">
-                <a href="https://github.com/gerkone/">Github</a>&nbsp/&nbsp
-                <a href="https://scholar.google.com/citations?user=EwdSrbsAAAAJ&hl=en">Google Scholar</a> &nbsp/&nbsp
-                <a href="assets/galletti_CV.pdf">CV</a>&nbsp/&nbsp
+                <a href="https://github.com/gerkone/">Github</a>&nbsp|&nbsp
+                <a href="https://scholar.google.com/citations?user=EwdSrbsAAAAJ&hl=en">Google Scholar</a> &nbsp|&nbsp
+                <a href="assets/galletti_CV.pdf">CV</a>&nbsp|&nbsp
                 <a href="mailto:ggalletti@tutanota.com">Email</a>
               </p>
             </td>
@@ -54,22 +53,30 @@
           </tr>
         </tbody></table>
         
-        <!-- research interest -->
+        <!-- research -->
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
             <td style="padding:20px;width:100%;vertical-align:middle">
               <heading>Research</heading>
-              <p>
-              Currently working on 5-dimensional plasma turbulence modeling in Tokamaks with machine learning,
-              and industrial domain generalization for metal processing on a variety of manufacturing conditions.<br>
-              During my Master's I got involved with academic research, with some applications of Graph Neural Networks and Equivariance for particle fluid problems.
-              In the past I've dealt with reinforcement learning, computer vision and autonomous driving.<br>
-              I've also worked in industry on process mining and production chain simulation throughout my Master's.
+              <p class="bio">
+              Currently working on modeling 5-dimensional plasma turbulence in Tokamaks (gyrokinetic simulations) with machine learning,
+              a joint project with the <a href="https://ccfe.ukaea.uk/">UK Atomic Energy Authority</a>,
+              as well as domain adaptation and robustness for industrial processing in a variety of application and manufacturing conditions
+              in collaboration with the <a href="https://www.lcm.at/">Linz Center of Mechatronics</a>.
+              <br><br>
+              During my Master's, I applied Graph Neural Networks and Equivariance to particle fluid problems.
+              In the past I was involved in an <a href="https://motorsport.unibo.it/">autonomous racing student club</a>, as well as 
+              reinforcement learning and computer vision projects.<br>
+              I've also worked in industry throughout my Master's, on process mining and simulation at <a href="https://celonis.com">Celonis</a>.
+              <br><br>
+              If you are looking for a BSc/MSc thesis in my research areas, reach out at <a href="mailto:galletti@ml.jku.at"><code>galletti[at]ml.jku.at</code></a>
+
               </p>
             </td>
           </tr>
         </tbody></table>
 
+        <!-- papers -->
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tbody>
             <tr>
@@ -77,37 +84,43 @@
                 <heading>Publications</heading>
 
                 <!-- <p>
-                  <a href=https://arxiv.org/abs/> title </a> -- <a href=https://github.com/repo>[code]</a> <br>
-                  <b>G. Galletti<span class="equal-contribution">*</span></b>, authors <br> 
-                  year, venue.
+                  <a href=https://arxiv.org/abs/> title </a> -- <a href=https://github.com/repo class="code-button">[code]</a> <br>
+                  <b class="my-name">G. Galletti<span class="equal-contribution">*</span></b>, authors <br> 
+                   <span>&#8618;</span> year, venue.
                 </p> -->
 
                 <p>
-                  <a href=https://arxiv.org/abs/2403.04750>JAX-SPH: A Differentiable Smoothed Particle Hydrodynamics Framework</a> -- <a href=https://github.com/tumaer/jax-sph class="code-button">[code]</a> <br>
-                  A. P. Toshev, H. Ramachandran<span class="equal-contribution">*</span>, J. A. Erbesdobler<span class="equal-contribution">*</span>, <b>G. Galletti<span class="equal-contribution">*</span></b>, J. Brandstetter, N. A. Adams <br> 
-                  2024, ICLR AI4Differential Workshop.
+                  <a href=https://arxiv.org/abs/2506.12007> SIMSHIFT: A Benchmark for Adapting Neural Surrogates to Distribution Shifts </a> -- <a href=https://github.com/psetinek/simshift class="code-button">[code]</a> <br>
+                  P. Setinek, <b class="my-name">G. Galletti</b>, T. Gross, D. Schnürer, J. Brandstetter, W. Zellinger <br> 
+                  <span>&#8618;</span> 2025, preprint.
+                </p>
+
+                <p>
+                  <a href=https://arxiv.org/abs/2502.07469> 5D Neural Surrogates for Nonlinear Gyrokinetic Simulations of Plasma Turbulence </a> <br>
+                  <b class="my-name">G Galletti</b>, F Paischer, P Setinek, W Hornsby, L Zanisi, N Carey, S Pamela, J Brandstetter <br> 
+                  <span>&#8618;</span> 2025, ICLR Workshops (CCAI & MLMP).
                 </p>
                 
                 <p>
                   <a href=https://arxiv.org/abs/2309.16342>LagrangeBench: A Lagrangian Fluid Mechanics Benchmarking Suite</a> -- <a href=https://github.com/tumaer/lagrangebench class="code-button">[code] </a> <br>
-                  A. P. Toshev<span class="equal-contribution">*</span>, <b>G. Galletti<span class="equal-contribution">*</span></b>, F. Fritz, S. Adami, N. A. Adams <br> 
-                  2023, NeurIPS Track on Datasets and Benchmarks.
+                  AP Toshev<span class="equal-contribution">*</span>, <b class="my-name">G Galletti<span class="equal-contribution">*</span></b>, F Fritz, S Adami, NA Adams <br> 
+                  <span>&#8618;</span> 2023, NeurIPS Datasets and Benchmarks.
                 </p>
                 
                 <p>
                   <a href=https://arxiv.org/abs/2305.15603>Learning Lagrangian Fluid Mechanics with E(3)-Equivariant Graph Neural Networks</a> -- <a href=https://github.com/tumaer/sph-hae class="code-button">[code]</a> <br>
-                  A. P. Toshev, <b>G. Galletti</b>, J. Brandstetter, S. Adami, N. A. Adams <br> 
-                  2023, Geometric Science of Information.
+                  AP Toshev, <b class="my-name">G Galletti</b>, J Brandstetter, S Adami, NA Adams <br> 
+                  <span>&#8618;</span> 2023, Geometric Science of Information.
                 </p>
 
                 <br>
-                <span class="equal-contribution">*</span><i>Equal contribution</i>
+                <span class="equal-contribution">*<i>Equal contribution</i></span>
               </td>
             </tr>
           </tbody>
         </table>
 
-        <!-- Projects -->
+        <!-- projects -->
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tbody>
             <tr>
@@ -117,31 +130,36 @@
                 <p>
                   <div class="row">
                     <div class="column">
+
                       <div class="card">
-                        <h3>LagrangeBench</h3>
-                        <a class="github-button" href="https://github.com/tumaer/lagrangebench" data-show-count="true" aria-label="Star lagrangebench on GitHub"><code>lagrangebench</code></a><br>
+                        <h3 class="cardtitle">jax-sph</h3>
+                        <a class="github-button" href="https://github.com/tumaer/jax-sph" data-show-count="true" aria-label="Star lagrangebench on GitHub"><code>jax-sph</code></a><br>
                         <p>
-                          LagrangeBench is a JAX-based machine learning benchmarking suite for Lagrangian problems.
-                          It provides a variety of models, datasets and utilities to train and evaluate particle-based approaches.
+                          Differentiable, ML oriented Smoothed Particle Hydrodynamics (SPH) solver, using JAX.
                         </p>
                       </div>
+
                       <div class="card">
-                        <h3>pyTORCS</h3>
+                        <h3 class="cardtitle">pyTORCS</h3>
                         <a class="github-button" href="https://github.com/gerkone/pytorcs-docker" data-show-count="true" aria-label="Star gerkone/pyTORCS-docker on GitHub"><code>pyTORCS-docker</code></a><br>
                         <p>
-                          Container-based TORCS environment/interface for reinforcement learning developed in Python, following the OpenAI Gym API style. TORCS is an open-source racing game. Part of my BSc thesis.
+                          Container-based <a href="https://en.wikipedia.org/wiki/TORCS">TORCS</a> environment for reinforcement learning. Part of my BSc thesis.
                         </p>
                       </div>
+
                     </div>
                     <div class="column">
+
                       <div class="card">
-                        <h3> Equivariant JAX</h3>
+                        <h3 class="cardtitle"> Equivariant JAX</h3>
                         <a class="github-button" href="https://github.com/gerkone/segnn-jax" data-show-count="true" aria-label="Star gerkone/segnn-jax on GitHub"><code>segnn-jax</code></a>
                         <a class="github-button" href="https://github.com/gerkone/painn-jax" data-show-count="true" aria-label="Star gerkone/painn-jax on GitHub"><code>painn-jax</code></a>
                         <a class="github-button" href="https://github.com/gerkone/egnn-jax" data-show-count="true" aria-label="Star gerkone/egnn-jax on GitHub"><code>egnn-jax</code></a><br>
-                        <p>Collection of some popular equivariant models implemented with the JAX library. 
-                          Performance and runtimes are validated on the original configuration and against the results from the official papers.</p>
+                        <p>Collection of some popular equivariant models, written in JAX. 
+                        </p>
                       </div>
+
+
                     </div>
                   </div>
                 </p>
@@ -151,12 +169,13 @@
         </table>
 
 
+        <!-- footer -->
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           <tr>
             <td style="padding:0px">
                 <br>
                 <p style="text-align:left;font-size:small;">
-                  Last update <i>10.12.2023</i>
+                  Last update <i>April 2025</i>
                 </p>
             </td>
             <td style="padding:0px">

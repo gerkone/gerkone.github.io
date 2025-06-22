@@ -71,7 +71,8 @@
 }
 
 a {
-  color: #1772d0;
+  color: #9fcefd;
+  font-style: italic;
   text-decoration: none;
 }
 
@@ -115,14 +116,15 @@ a {
 }
 
 body {
-  background-color: #cccccc;
+  background-color: #5d5d5d;
   opacity: 1.0;
-  background-image: radial-gradient(#dbdbdb 1px, #cacaca 1px);
+  background-image: radial-gradient(#535353 1px, #353535 1px);
   background-size: 10px 10px;
 }
 
 p {
   text-align: justify;
+  color: #dedede;
   word-spacing: -2px;
   overflow-wrap: anywhere;
   word-break: normal;
@@ -132,14 +134,23 @@ p {
   -ms-hyphens: auto;
 }
 
+.my-name {
+  color: #ffffff;
+}
+
 strong {
   font-family: 'Courier New', Courier, monospace;
   font-size: 14px;
 }
 
 heading {
+  color: #ffffff;
   font-family: 'Courier New', Courier, monospace;
   font-size: 22px;
+}
+h3 {
+  color: #ffffff;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 papertitle {
@@ -149,8 +160,9 @@ papertitle {
 }
 
 name {
+  color: #ffffff;
   font-family: 'Courier New', Courier, monospace;
-  font-size: 32px;
+  font-size: 40px;
 }
 
 .one {
@@ -175,10 +187,11 @@ name {
 }
 
 span.highlight {
-  background-color: #ffffd0;
+  background-color: #3b3b3b;
 }
 
 .equal-contribution {
+  color: #dedede;
   vertical-align: text-top;
 }
 
@@ -191,7 +204,8 @@ span.highlight {
 
 .code-button:focus,
 .code-button:hover {
-  color: #1772d0;
+  color: #9fcefd;
+  font-style: italic;
   text-decoration: none;
 }
 
@@ -217,24 +231,39 @@ span.highlight {
   clear: both;
 }
 
+.cardtitle {
+  color: #ffffff;
+  font-style: bold;
+  font-family: 'Courier New', Courier, monospace;
+}
+
 /* Style the counter cards */
 .card {
   box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.2);
   padding: 16px;
   margin: 16px 0;
   text-align: center;
-  background-color: #e6e6e6;
-  /* cursor: pointer; */
+  background-color: #3b332b;
+  font-family: 'Courier New', Courier, monospace;
+  text-wrap: balance;
 }
 
+/* cursor: pointer; */
+
 .card:hover {
-  background-color: #ffe8ce;
+  background-color: #404030;
 }
+
+/* mobile stuff */
 
 @media screen and (max-width: 600px) {
 
-  p {
-    text-align: left;
+  .card p {
+    text-align: center;
+    text-justify: inter-word;
+    word-spacing: normal;
+    hyphens: auto;
+    line-height: 1.6;
   }
 
   /* Responsive columns */
@@ -268,6 +297,7 @@ span.highlight {
   .bio {
     order: 3;
     display: block;
+    text-wrap: balance;
   }
 
   .refs {
@@ -284,5 +314,36 @@ span.highlight {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  /* scale things up */
+
+  .github-button {
+    transform: scale(10.8);
+    transform-origin: top left;
+  }
+
+  body,
+  td,
+  th,
+  tr,
+  a {
+    font-size: 16px;
+  }
+
+  strong {
+    font-size: 17px;
+  }
+
+  name {
+    font-size: 42px;
+  }
+
+  heading {
+    font-size: 30px;
+  }
+
+  papertitle {
+    font-size: 16px;
   }
 }

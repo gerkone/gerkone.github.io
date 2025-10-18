@@ -29,14 +29,14 @@
                 <img style="width:100%;max-width:100%;border-radius:50%;" alt="profile photo" src="images/profile.jpg">
               </span>
               <p class="bio">
-                I'm a first year PhD student in Johannes Brandstetter's group at JKU Linz (Austria), working on
+                I'm a PhD student in Johannes Brandstetter's group at JKU Linz (Austria), working on
                 large-scale turbulent physical simulations with machine learning and generative modeling.
                 <br><br>
                 I got my Master's degree from TU Munich and my Bachelor's degree at the
                 University of Bologna, my birthplace and hometown.
                 <br><br>
                 I have been practicing traditional archery for 5 years. I also run,
-                and enjoy motorsports, as well as hiking and sometimes climbing.
+                and enjoy motorsports, as well as hiking and climbing.
               </p>
               <p>
               </p>
@@ -59,7 +59,7 @@
             <td style="padding:20px;width:100%;vertical-align:middle">
               <heading>Research</heading>
               <p class="bio">
-              Currently working on modeling 5-dimensional plasma turbulence in Tokamaks (gyrokinetic simulations) with machine learning,
+              Currently working on modeling plasma turbulence in Tokamaks (gyrokinetic simulations) with machine learning,
               a joint project with the <a href="https://ccfe.ukaea.uk/">UK Atomic Energy Authority</a>,
               as well as domain adaptation and robustness for industrial processing in a variety of application and manufacturing conditions
               in collaboration with the <a href="https://www.lcm.at/">Linz Center of Mechatronics</a>.
@@ -81,29 +81,36 @@
           <tbody>
             <tr>
               <td style="padding:20px;width:100%;vertical-align:middle">
-                <heading>Publications</heading>
-
+                <heading>Selected publications</heading>
+                
                 <!-- <p>
                   <a href=https://arxiv.org/abs/> title </a> -- <a href=https://github.com/repo class="code-button">[code]</a> <br>
                   <b class="my-name">G. Galletti<span class="equal-contribution">*</span></b>, authors <br> 
-                   <span>&#8618;</span> year, venue.
+                  <span>&#8618;</span> year, venue.
+                </p> -->
+                
+                <!-- <p>
+                  <a href=https://arxiv.org/abs> Physics-Informed Compression of Plasma Turbulence </a> -- <a href=https://github.com/ml-jku/neural-gyrokinetics class="code-button">[code]</a> <br>
+                  <b class="my-name">G Galletti</b>, G Gutenbrunner, F Paischer, SS Cranganore, W Hornsby, P Setinek, L Zanisi, N Carey, S Pamela, J Brandstetter <br> 
+                  <span>&#8618;</span> 2025, preprint.
                 </p> -->
 
                 <p>
+                  <a href=https://arxiv.org/abs> GyroSwin: 5D Surrogates for Gyrokinetic Plasma Turbulence Simulations </a> -- <a href="https://ml-jku.github.io/blog/2025/gyroswin/" class="code-button">[blogpost]</a>, <a href=https://github.com/ml-jku/neural-gyrokinetics class="code-button">[code]</a>  <br>
+                  F Paischer<span class="equal-contribution">*</span> and <b class="my-name">G Galletti<span class="equal-contribution">*</span></b>, W Hornsby, P Setinek, L Zanisi, N Carey, S Pamela, J Brandstetter <br> 
+                  <span>&#8618;</span> 2025, NeurIPS.
+                </p>
+                
+                <p>
                   <a href=https://arxiv.org/abs/2506.12007> SIMSHIFT: A Benchmark for Adapting Neural Surrogates to Distribution Shifts </a> -- <a href=https://github.com/psetinek/simshift class="code-button">[code]</a> <br>
                   P. Setinek, <b class="my-name">G. Galletti</b>, T. Gross, D. Schnürer, J. Brandstetter, W. Zellinger <br> 
+                  <!-- <span>&#8618;</span> 2025, NeurIPS Datasets and Benchmarks. -->
                   <span>&#8618;</span> 2025, preprint.
-                </p>
-
-                <p>
-                  <a href=https://arxiv.org/abs/2502.07469> 5D Neural Surrogates for Nonlinear Gyrokinetic Simulations of Plasma Turbulence </a> <br>
-                  <b class="my-name">G Galletti</b>, F Paischer, P Setinek, W Hornsby, L Zanisi, N Carey, S Pamela, J Brandstetter <br> 
-                  <span>&#8618;</span> 2025, ICLR Workshops (CCAI & MLMP).
                 </p>
                 
                 <p>
                   <a href=https://arxiv.org/abs/2309.16342>LagrangeBench: A Lagrangian Fluid Mechanics Benchmarking Suite</a> -- <a href=https://github.com/tumaer/lagrangebench class="code-button">[code] </a> <br>
-                  AP Toshev<span class="equal-contribution">*</span>, <b class="my-name">G Galletti<span class="equal-contribution">*</span></b>, F Fritz, S Adami, NA Adams <br> 
+                  AP Toshev<span class="equal-contribution">*</span> and <b class="my-name">G Galletti<span class="equal-contribution">*</span></b>, F Fritz, S Adami, NA Adams <br> 
                   <span>&#8618;</span> 2023, NeurIPS Datasets and Benchmarks.
                 </p>
                 
@@ -112,7 +119,7 @@
                   AP Toshev, <b class="my-name">G Galletti</b>, J Brandstetter, S Adami, NA Adams <br> 
                   <span>&#8618;</span> 2023, Geometric Science of Information.
                 </p>
-
+                
                 <br>
                 <span class="equal-contribution">*<i>Equal contribution</i></span>
               </td>
@@ -120,6 +127,22 @@
           </tbody>
         </table>
 
+        <!-- blog -->
+        <!-- <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tbody>
+            <tr>
+              <td style="padding:20px;width:100%;vertical-align:middle">
+                <heading>Blog</heading>
+                <p class="blog-card">
+                  [30/07/2025] &nbsp; -- &nbsp; 
+                  <img src="blog/figures/gyro/neugk_icon.png" class="blog-icon" alt="neugk Icon"> &nbsp; 
+                  <a href="blog/gyro.html"> NeuGK: 5D Neural Gyrokinetics for Efficient Plasma Turbulence Simulations</a>
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table> -->
+        
         <!-- projects -->
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tbody>
@@ -138,7 +161,7 @@
                           Differentiable, ML oriented Smoothed Particle Hydrodynamics (SPH) solver, using JAX.
                         </p>
                       </div>
-
+                      
                       <div class="card">
                         <h3 class="cardtitle">pyTORCS</h3>
                         <a class="github-button" href="https://github.com/gerkone/pytorcs-docker" data-show-count="true" aria-label="Star gerkone/pyTORCS-docker on GitHub"><code>pyTORCS-docker</code></a><br>
@@ -175,14 +198,11 @@
             <td style="padding:0px">
                 <br>
                 <p style="text-align:left;font-size:small;">
-                  Last update <i>April 2025</i>
+                  Updated <i>October 2025</i>
                 </p>
             </td>
             <td style="padding:0px">
               <br>
-              <p style="text-align:right;font-size:small;">
-                Template by <a href="https://jonbarron.info/">Jon Barron</a>.
-              </p>
             </td>
           </tr>
         </tbody></table>

@@ -148,7 +148,16 @@ heading {
   font-family: 'Courier New', Courier, monospace;
   font-size: 22px;
 }
-h3 {
+
+h1, h2, h3 {
+  color: #ffffff;
+  font-family: 'Courier New', Courier, monospace;
+  border-bottom: 1px solid #ffffff;
+  padding-bottom: 4px;
+  margin-bottom: 12px;
+}
+
+ul {
   color: #ffffff;
   font-family: 'Courier New', Courier, monospace;
 }
@@ -252,6 +261,9 @@ span.highlight {
 
 .card:hover {
   background-color: #404030;
+  background-color: #404030;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* mobile stuff */
@@ -346,4 +358,59 @@ span.highlight {
   papertitle {
     font-size: 16px;
   }
+}
+
+/* blog stuff */
+.blog-card {
+  background: #3b332b;
+  padding: 15px 20px;
+  margin-top: 10px;
+  /* border-radius: 12px; */
+  box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.blog-card:hover {
+  background-color: #404030;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.blog-card a:hover {
+  text-decoration: underline;
+}
+
+.note {
+  border-left: 4px solid #c27721;
+  background-color: #3b332b;
+  padding: 12px 16px;
+  margin: 1em 0;
+  border-radius: 4px;
+}
+
+.note::before {
+  content: "Note";
+  display: block;
+  font-weight: bold;
+  color: #c27721;
+  margin-bottom: 6px;
+}
+
+.scroll-math {
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  padding: 1em 0;
+}
+
+.scroll-math span {
+  display: inline-block;
+  min-width: max-content;
+}
+
+.blog-icon {
+  height: 16px;
+  vertical-align: middle;
+  margin-right: -2px;
 }

@@ -1,0 +1,299 @@
+<!DOCTYPE HTML>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <title>gyaradax: Local Gyrokinetics in JAX</title>
+  <link rel="stylesheet" type="text/css" href="../stylesheet.css">
+  <link rel="icon" type="image/png" href="../images/triceracop_icon.jpg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* -- theme variables -- */
+    :root {
+      --bg: #1a1a2e;
+      --text: #dedede;
+      --text-dim: #bbb;
+      --heading: #ffffff;
+      --link: #9fcefd;
+      --accent: #c27721;
+      --card-bg: rgba(30, 30, 50, 0.85);
+      --card-border: #444;
+      --code: #c27721;
+      --pre-bg: #12121f;
+      --tldr-bg: rgba(30, 30, 50, 0.9);
+      --table-header: rgba(30, 30, 50, 0.9);
+      --table-stripe: rgba(255,255,255,0.03);
+    }
+    [data-theme="light"] {
+      --bg: #f5f5f0;
+      --text: #333;
+      --text-dim: #666;
+      --heading: #111;
+      --link: #1a5fa0;
+      --accent: #b05a10;
+      --card-bg: #fff;
+      --card-border: #ccc;
+      --code: #b05a10;
+      --pre-bg: #eee;
+      --tldr-bg: #f0e8df;
+      --table-header: #e8e0d8;
+      --table-stripe: rgba(0,0,0,0.03);
+    }
+
+    body { background: var(--bg); margin: 0; }
+
+    .blog-body {
+      max-width: 780px; margin: 40px auto; padding: 0 24px;
+      font-family: 'Courier New', Courier, monospace; font-size: 14px;
+    }
+    .blog-body p, .blog-body li { line-height: 1.7; color: var(--text); }
+    .blog-body h1 { font-size: 26px; border-bottom: none; margin-bottom: 4px; color: var(--heading); }
+    .blog-body h2 { font-size: 19px; margin-top: 36px; color: var(--heading); border-bottom: 1px solid var(--card-border); padding-bottom: 4px; }
+    .blog-body h3 { font-size: 15px; margin-top: 24px; color: var(--heading); border-bottom: none; }
+    .blog-body .subtitle { color: var(--text-dim); font-size: 13px; margin-bottom: 24px; }
+    .blog-body a { color: var(--link); }
+    .blog-body a:hover { color: var(--accent); }
+    .blog-body figure { text-align: center; margin: 24px 0; }
+    .blog-body figure img { max-width: 100%; border-radius: 4px; }
+    .blog-body figcaption { color: var(--text-dim); font-size: 12px; margin-top: 6px; }
+    .blog-body code { color: var(--code); font-size: 13px; }
+    .blog-body pre { background: var(--pre-bg); padding: 12px 16px; overflow-x: auto; border-radius: 4px; }
+    .blog-body pre code { color: var(--text); }
+    .blog-body .tldr {
+      border-left: 4px solid var(--accent); background: var(--tldr-bg);
+      padding: 12px 16px; margin: 1em 0; border-radius: 4px; color: var(--text);
+    }
+    .blog-body .back { font-size: 12px; margin-bottom: 20px; display: inline-block; }
+    .blog-body table { border-collapse: collapse; width: 100%; margin: 16px 0; font-size: 13px; }
+    .blog-body th, .blog-body td { border: 1px solid var(--card-border); padding: 6px 10px; text-align: center; color: var(--text); }
+    .blog-body th { background: var(--table-header); color: var(--heading); }
+    .blog-body td[colspan] { background: var(--pre-bg); font-style: italic; }
+    .blog-body ul { color: var(--text); }
+    .blog-body strong { color: var(--heading); }
+    .badges { text-align: center; margin-bottom: 16px; }
+    .badges a { margin: 0 4px; }
+
+    /* theme toggle */
+    .theme-toggle {
+      position: fixed; top: 14px; right: 16px; z-index: 100;
+      background: var(--card-bg); border: 1px solid var(--card-border);
+      color: var(--text); font-family: monospace; font-size: 14px;
+      padding: 4px 10px; cursor: pointer; border-radius: 4px;
+    }
+    .theme-toggle:hover { color: var(--accent); border-color: var(--accent); }
+
+    /* mobile */
+    @media (max-width: 600px) {
+      .blog-body { padding: 0 14px; margin: 20px auto; }
+      .blog-body h1 { font-size: 22px; }
+      .blog-body h2 { font-size: 17px; }
+      .blog-body table { font-size: 11px; }
+      .blog-body th, .blog-body td { padding: 4px 6px; }
+      .theme-toggle { top: 8px; right: 8px; font-size: 12px; padding: 3px 8px; }
+    }
+  </style>
+</head>
+<body>
+
+<button class="theme-toggle" onclick="toggleTheme()" title="Toggle light/dark mode">
+  <span id="theme-icon">&#9788;</span>
+</button>
+
+<div class="blog-body">
+
+<a href="../index.html" class="back">&larr; back</a>
+
+<h1>gyaradax: Local Gyrokinetics in JAX</h1>
+<p class="subtitle">
+  Gianluca Galletti, Eric Volkmann, Johannes Brandstetter<br>
+  April 2026
+</p>
+
+<div class="badges">
+  <a href="https://github.com/gerkone/gyaradax" target="_blank">
+    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=FFFFFF" alt="code">
+  </a>
+  <a href="https://arxiv.org/abs/2604.06085" target="_blank">
+    <img src="https://img.shields.io/badge/arXiv-B31B1B?style=for-the-badge&logo=arXiv&logoColor=FFFFFF" alt="paper">
+  </a>
+</div>
+
+<div class="tldr">
+  <strong>TL;DR</strong> &mdash;
+  Gyrokinetic simulations are essential for understanding plasma turbulence in fusion reactors, but legacy Fortran codes are hard to maintain and incompatible with modern ML workflows.
+  <code>gyaradax</code> is a minimal JAX reimplementation of the GKW gyrokinetic solver: ~3,000 lines of Python that match the Fortran reference to machine precision, run on GPUs, and are end-to-end differentiable.
+  Development was driven by coding agents with human oversight. Custom CUDA kernels provide an additional 2.7x speedup over the XLA-compiled baseline.
+</div>
+
+<figure>
+  <video autoplay loop muted playsinline style="max-width:100%; border-radius:4px;">
+    <source src="figures/torus.mp4" type="video/mp4">
+  </video>
+</figure>
+
+<h2>Why another gyrokinetics code?</h2>
+<p>
+  Gyrokinetic codes like <a href="https://bitbucket.org/gkw/gkw">GKW</a> solve the 5D Vlasov-Poisson system that governs microscale turbulence in magnetically confined plasmas. These codes are mature and well-validated, but they are written in Fortran with MPI parallelism, making them difficult to integrate with gradient-based optimization, neural surrogates, or differentiable physics pipelines.
+</p>
+<p>
+  <code>gyaradax</code> provides the same physics in a format that modern ML researchers can actually use: a pure-Python, functional JAX codebase with native GPU support and automatic differentiation through the full solver.
+</p>
+
+<h2>What it solves</h2>
+<p>
+  The solver evolves the perturbed distribution function <em>f(v<sub>||</sub>, &mu;, s, k<sub>x</sub>, k<sub>y</sub>)</em> under the gyrokinetic equation. The active RHS terms are:
+</p>
+<ul>
+  <li><strong>Terms I, IV</strong> &mdash; Parallel streaming and mirror trapping (finite-difference stencils along the field line and in velocity space)</li>
+  <li><strong>Term II</strong> &mdash; Magnetic drift advection</li>
+  <li><strong>Term III</strong> &mdash; Nonlinear E&times;B advection (pseudospectral Poisson bracket with dealiased 2D FFTs)</li>
+  <li><strong>Terms V, VII, VIII</strong> &mdash; Equilibrium and field-gradient drives</li>
+</ul>
+<p>
+  Both adiabatic (single ion species) and kinetic electron (multi-species) configurations are supported. Time integration is explicit RK4 with adaptive CFL.
+</p>
+
+<figure>
+  <img src="figures/fluxes_iteration_13.png" alt="Heat flux comparison">
+  <figcaption>Empirical validation: heat flux time trace for an adiabatic ITG equilibrium. gyaradax (orange) vs GKW Fortran reference (blue) show statistical agreement through linear growth, overshoot, and nonlinear saturation.</figcaption>
+</figure>
+
+<figure>
+  <img src="figures/spectra_iteration_13.png" alt="Spectral validation">
+  <figcaption>Saturated-state spectra (k<sub>y</sub> and k<sub>x</sub>) for the same equilibrium. The spectral shape and peak location match quantitatively.</figcaption>
+</figure>
+
+<h2>Formal verification</h2>
+<p>
+  Beyond empirical parity across 46 ITG equilibria, we verify <code>gyaradax</code> on two standard analytical benchmarks.
+</p>
+
+<h3>Rosenbluth-Hinton zonal flow test</h3>
+<p>
+  The RH test is a sensitive end-to-end check of the field solver and linear dynamics. A zonal flow (k<sub>&zeta;</sub>=0) excites a geodesic acoustic mode that oscillates and damps via collisionless Landau damping. The long-time residual is given analytically by &phi;(&infin;)/&phi;(0) = 1/(1 + q<sup>2</sup>&Theta;/&epsilon;<sup>2</sup>).
+</p>
+<p>
+  At q=1.3, &epsilon;=0.05, <code>gyaradax</code> converges to a residual of 0.0711, matching the analytical prediction. A scan over &epsilon; at fixed q follows the analytical curve across the full range.
+</p>
+
+<figure>
+  <img src="figures/rh_zonal_flow.png" alt="Rosenbluth-Hinton zonal flow test">
+  <figcaption>Rosenbluth-Hinton test at q=1.3. (a) Zonal potential residual over time at &epsilon;=0.05. (b) Residual vs &epsilon;, compared with the analytical formula.</figcaption>
+</figure>
+
+<h3>Cyclone Base Case</h3>
+<p>
+  The CBC is the standard linear benchmark for ITG-driven instability. At q=1.4, &scirc;=0.78, &epsilon;=0.19, R/L<sub>n</sub>=2.2 with s-alpha geometry, <code>gyaradax</code> matches GKW growth rates both as a function of k<sub>&theta;</sub>&rho;<sub>s</sub> and as a function of R/L<sub>T</sub>.
+</p>
+
+<figure>
+  <img src="figures/cbc_linear_itg.png" alt="Cyclone Base Case">
+  <figcaption>Cyclone Base Case (linear). (a) Growth rate vs k<sub>&theta;</sub>&rho;<sub>s</sub> at R/L<sub>T</sub>=6.9. (b) Growth rate vs R/L<sub>T</sub> at k<sub>&theta;</sub>&rho;<sub>s</sub>=0.5.</figcaption>
+</figure>
+
+<h2>Performance: mixed precision and CUDA kernels</h2>
+<p>
+  Two orthogonal optimizations improve throughput beyond what XLA provides out of the box:
+</p>
+
+<h3>Mixed-precision nonlinear FFTs</h3>
+<p>
+  The eight 2D FFTs per RK4 step (four inverse, one forward, per species) dominate the nonlinear cost. Casting spectral arrays to FP32 before the inverse FFTs halves the memory bandwidth, with the forward FFT output promoted back to FP64 for accumulation. This is safe because the Poisson bracket is a local real-space product &mdash; the FP32 error is suppressed by the dealiasing zero-padding.
+</p>
+
+<h3>Z2Z two-for-one packing</h3>
+<p>
+  Both spatial derivatives of the same field (<em>ik<sub>x</sub> f&#770;</em> and <em>ik<sub>y</sub> f&#770;</em>) are packed into a single complex-to-complex (C2C) inverse FFT, reducing the count from four to two. A Hermitian symmetrization correction at <em>k<sub>y</sub>=0</em> prevents channel leakage from the Bessel function's symmetry defect.
+</p>
+
+<h3>Custom CUDA kernels</h3>
+<p>
+  For the <strong>linear RHS</strong>, a single CUDA kernel fuses the 9-point parallel stencil, 5-point velocity stencil, and all 8 elementwise physics terms. XLA compiles most of this into one kernel, but uses general-purpose gather operations for the stencils; our kernel uses direct strided addressing with compile-time boundary constants.
+</p>
+<p>
+  For the <strong>nonlinear term</strong>, XLA cannot fuse across cuFFT calls. Our CUDA kernel uses Link-Time Optimization (LTO) callbacks to embed the spectral derivative multiplication, gyro-averaging, bracket computation, and spectrum unpacking directly into cuFFT's butterfly passes, avoiding three intermediate global-memory round-trips.
+</p>
+
+<figure>
+  <img src="figures/cufft_lto_fusion_paper.png" alt="CUDA LTO fusion pipeline">
+  <figcaption>Fusion pipeline for the nonlinear Poisson bracket. Left: standard pipeline with separate kernels. Right: LTO callbacks fuse all pre/post-FFT work into cuFFT butterfly passes, with z2z packing reducing inverse FFTs from 4 to 2.</figcaption>
+</figure>
+
+<h2>Benchmarks</h2>
+<p>
+  Grid: (N<sub>kx</sub>, N<sub>s</sub>, N<sub>&mu;</sub>, N<sub>v</sub>, N<sub>ky</sub>) = (85, 16, 8, 32, 32). Single NVIDIA A100 80GB.
+</p>
+<table>
+  <tr><th>Configuration</th><th>Steps/s</th><th>Mem (GB)</th></tr>
+  <tr><td colspan="3"><em>Adiabatic electrons</em></td></tr>
+  <tr><td>GKW Fortran (DP)</td><td>5.8</td><td>18.0 (RAM)</td></tr>
+  <tr><td>gyaradax JAX (DP)</td><td>9.7</td><td>9.2</td></tr>
+  <tr><td>gyaradax JAX (MP)</td><td>22.8</td><td>9.2</td></tr>
+  <tr><td>gyaradax CUDA (MP)</td><td>25.9</td><td>10.8</td></tr>
+  <tr><td colspan="3"><em>Kinetic electrons</em></td></tr>
+  <tr><td>GKW Fortran (DP)</td><td>3.4</td><td>38.8 (RAM)</td></tr>
+  <tr><td>gyaradax JAX (DP)</td><td>5.0</td><td>34.8</td></tr>
+  <tr><td>gyaradax JAX (MP)</td><td>12.2</td><td>34.8</td></tr>
+  <tr><td>gyaradax CUDA (MP)</td><td>&mdash;</td><td>&mdash;</td></tr>
+</table>
+<p style="font-size:12px; color:var(--text-dim);">
+  DP = Float64, MP = Float32 nonlinear FFTs. GKW uses CPU RAM; gyaradax uses GPU VRAM.
+</p>
+
+<h2>Differentiable programming</h2>
+<p>
+  Because the full solver is a pure JAX function, we can compute gradients of any scalar output with respect to any input. Two examples from the paper:
+</p>
+<ul>
+  <li><strong>Sensitivity analysis</strong>: <code>jax.grad</code> of the per-mode growth rate with respect to the temperature gradient, producing a spectral sensitivity map without finite differences.</li>
+  <li><strong>Geometry optimization</strong>: truncated backpropagation through nonlinear turbulence to minimize saturated heat flux with respect to equilibrium parameters (q, &#349;, &epsilon;).</li>
+</ul>
+
+<figure style="display:flex; gap:4px; flex-wrap:wrap; justify-content:center;">
+  <img src="figures/inverse_spectrum.png" alt="Inverse problem spectra and convergence" style="max-width:49%;">
+  <img src="figures/inv_landscape.png" alt="Loss landscape and gradient" style="max-width:49%;">
+  <figcaption style="width:100%;">Inverse problem: recovering R/L<sub>T</sub> from a target electrostatic potential via <code>jax.grad</code> through the full 400-step solver. Left: initial, target, and recovered k<sub>y</sub> spectra (top) and R/L<sub>T</sub> convergence (bottom). Right: loss landscape and AD gradient, with the Adam trajectory overlaid.</figcaption>
+</figure>
+
+<h2>Vibecoding: agents wrote the solver</h2>
+<p>
+  The core solver was translated from &gt;30,000 lines of Fortran by coding agents (GPT-5.3 Codex, Claude 4.6 Opus) with human oversight. The key enabler was an <em>empirical test-driven</em> workflow: GKW reference trajectories and unit tests provided measurable progress signals that the agents could optimize against. The CUDA kernels were generated by a multi-agent pipeline with a dual-LLM consensus loop for optimization strategy, followed by iterative implementation by fast coding models.
+</p>
+
+<h2>Links</h2>
+<ul>
+  <li><a href="https://github.com/gerkone/gyaradax">Code on GitHub</a></li>
+  <li><a href="https://arxiv.org/abs/2604.06085">Paper on arXiv</a></li>
+  <li><a href="https://ml-jku.github.io/blog/2025/gyroswin/">GyroSwin blog post</a> &mdash; our neural surrogate for the same physics</li>
+</ul>
+
+<br>
+<p style="text-align:left;font-size:small;">
+  <a href="../index.html">&larr; back</a>
+</p>
+
+</div>
+
+
+<script>
+function toggleTheme() {
+  const html = document.documentElement;
+  const current = html.getAttribute('data-theme');
+  const next = current === 'dark' ? 'light' : 'dark';
+  html.setAttribute('data-theme', next);
+  document.getElementById('theme-icon').innerHTML = next === 'dark' ? '&#9788;' : '&#9790;';
+  localStorage.setItem('theme', next);
+}
+// restore saved preference
+(function() {
+  const saved = localStorage.getItem('theme');
+  if (saved) {
+    document.documentElement.setAttribute('data-theme', saved);
+    document.addEventListener('DOMContentLoaded', function() {
+      document.getElementById('theme-icon').innerHTML = saved === 'dark' ? '&#9788;' : '&#9790;';
+    });
+  }
+})();
+</script>
+
+</body>
+</html>

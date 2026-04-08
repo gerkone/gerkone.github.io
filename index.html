@@ -1,19 +1,20 @@
 <!DOCTYPE HTML>
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
   <title>Gianluca Galletti</title>
-  
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
   <link rel="icon" type="image/png" href="images/triceracop_icon.jpg">
-  
   <meta name="author" content="Gianluca Galletti">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
   <script async defer src="https://buttons.github.io/buttons.js"></script>
-
 </head>
 
 <body>
+  <button class="theme-toggle" onclick="toggleTheme()" title="Toggle light/dark mode">
+    <span id="theme-icon">&#9788;</span>
+  </button>
+
   <table style="width:100%;max-width:850px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
     <tr style="padding:0px">
       <td style="padding:0px">
@@ -38,8 +39,6 @@
                 I have been practicing traditional archery for 5 years. I also run,
                 and enjoy motorsports, as well as hiking and climbing.
               </p>
-              <p>
-              </p>
               <p class="refs">
                 <a href="https://github.com/gerkone/">Github</a>&nbsp|&nbsp
                 <a href="https://scholar.google.com/citations?user=EwdSrbsAAAAJ&hl=en">Google Scholar</a> &nbsp|&nbsp
@@ -52,7 +51,7 @@
             </td>
           </tr>
         </tbody></table>
-        
+
         <!-- research -->
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
@@ -65,12 +64,11 @@
               in collaboration with the <a href="https://www.lcm.at/">Linz Center of Mechatronics</a>.
               <br><br>
               During my Master's, I applied Graph Neural Networks and Equivariance to particle fluid problems.
-              In the past I was involved in an <a href="https://motorsport.unibo.it/">autonomous racing student club</a>, as well as 
+              In the past I was involved in an <a href="https://motorsport.unibo.it/">autonomous racing student club</a>, as well as
               reinforcement learning and computer vision projects.<br>
               I've also worked in industry throughout my Master's, on process mining and simulation at <a href="https://celonis.com">Celonis</a>.
               <br><br>
               If you are looking for a BSc/MSc thesis in my research areas, reach out at <a href="mailto:galletti@ml.jku.at"><code>galletti[at]ml.jku.at</code></a>
-
               </p>
             </td>
           </tr>
@@ -82,44 +80,43 @@
             <tr>
               <td style="padding:20px;width:100%;vertical-align:middle">
                 <heading>Selected publications</heading>
-                
-                <!-- <p>
-                  <a href=https://arxiv.org/abs/> title </a> -- <a href=https://github.com/repo class="code-button">[code]</a> <br>
-                  <b class="my-name">G. Galletti<span class="equal-contribution">*</span></b>, authors <br> 
-                  <span>&#8618;</span> year, venue.
-                </p> -->
-                
-                <!-- <p>
-                  <a href=https://arxiv.org/abs> Physics-Informed Compression of Plasma Turbulence </a> -- <a href=https://github.com/ml-jku/neural-gyrokinetics class="code-button">[code]</a> <br>
-                  <b class="my-name">G Galletti</b>, G Gutenbrunner, F Paischer, SS Cranganore, W Hornsby, P Setinek, L Zanisi, N Carey, S Pamela, J Brandstetter <br> 
-                  <span>&#8618;</span> 2025, preprint.
-                </p> -->
 
                 <p>
-                  <a href=https://arxiv.org/abs> GyroSwin: 5D Surrogates for Gyrokinetic Plasma Turbulence Simulations </a> -- <a href="https://ml-jku.github.io/blog/2025/gyroswin/" class="code-button">[blogpost]</a>, <a href=https://github.com/ml-jku/neural-gyrokinetics class="code-button">[code]</a>  <br>
-                  F Paischer<span class="equal-contribution">*</span> and <b class="my-name">G Galletti<span class="equal-contribution">*</span></b>, W Hornsby, P Setinek, L Zanisi, N Carey, S Pamela, J Brandstetter <br> 
+                  <a href=https://arxiv.org/abs/2604.06085> gyaradax: Local Gyrokinetics in JAX </a> -- <a href=https://github.com/gerkone/gyaradax class="code-button">[code]</a> <br>
+                  <b class="my-name">G. Galletti<span class="equal-contribution">*</span></b>, E. Volkmann<span class="equal-contribution">*</span>, J. Brandstetter <br>
+                  <span>&#8618;</span> 2026, preprint.
+                </p>
+
+                <p>
+                  <a href=https://arxiv.org/abs/2602.04758> Physics-Informed Neural Compression of High-Dimensional Plasma Data </a> -- <a href=https://github.com/ml-jku/neural-gyrokinetics class="code-button">[code]</a> <br>
+                  <b class="my-name">G. Galletti</b>, G. Gutenbrunner, SS. Cranganore, W. Hornsby, L. Zanisi, N. Carey, S. Pamela, J. Brandstetter, F. Paischer <br>
+                  <span>&#8618;</span> 2026, preprint.
+                </p>
+
+                <p>
+                  <a href=https://arxiv.org/abs/2510.07314> GyroSwin: 5D Surrogates for Gyrokinetic Plasma Turbulence Simulations </a> -- <a href=https://github.com/ml-jku/neural-gyrokinetics class="code-button">[code]</a> <br>
+                  F Paischer<span class="equal-contribution">*</span> and <b class="my-name">G Galletti<span class="equal-contribution">*</span></b>, W Hornsby, P Setinek, L Zanisi, N Carey, S Pamela, J Brandstetter <br>
                   <span>&#8618;</span> 2025, NeurIPS.
                 </p>
-                
+
                 <p>
                   <a href=https://arxiv.org/abs/2506.12007> SIMSHIFT: A Benchmark for Adapting Neural Surrogates to Distribution Shifts </a> -- <a href=https://github.com/psetinek/simshift class="code-button">[code]</a> <br>
-                  P. Setinek, <b class="my-name">G. Galletti</b>, T. Gross, D. Schnürer, J. Brandstetter, W. Zellinger <br> 
-                  <!-- <span>&#8618;</span> 2025, NeurIPS Datasets and Benchmarks. -->
+                  P. Setinek, <b class="my-name">G. Galletti</b>, T. Gross, D. Schnurer, J. Brandstetter, W. Zellinger <br>
                   <span>&#8618;</span> 2025, preprint.
                 </p>
-                
+
                 <p>
                   <a href=https://arxiv.org/abs/2309.16342>LagrangeBench: A Lagrangian Fluid Mechanics Benchmarking Suite</a> -- <a href=https://github.com/tumaer/lagrangebench class="code-button">[code] </a> <br>
-                  AP Toshev<span class="equal-contribution">*</span> and <b class="my-name">G Galletti<span class="equal-contribution">*</span></b>, F Fritz, S Adami, NA Adams <br> 
+                  AP Toshev<span class="equal-contribution">*</span> and <b class="my-name">G Galletti<span class="equal-contribution">*</span></b>, F Fritz, S Adami, NA Adams <br>
                   <span>&#8618;</span> 2023, NeurIPS Datasets and Benchmarks.
                 </p>
-                
+
                 <p>
                   <a href=https://arxiv.org/abs/2305.15603>Learning Lagrangian Fluid Mechanics with E(3)-Equivariant Graph Neural Networks</a> -- <a href=https://github.com/tumaer/sph-hae class="code-button">[code]</a> <br>
-                  AP Toshev, <b class="my-name">G Galletti</b>, J Brandstetter, S Adami, NA Adams <br> 
+                  AP Toshev, <b class="my-name">G Galletti</b>, J Brandstetter, S Adami, NA Adams <br>
                   <span>&#8618;</span> 2023, Geometric Science of Information.
                 </p>
-                
+
                 <br>
                 <span class="equal-contribution">*<i>Equal contribution</i></span>
               </td>
@@ -128,21 +125,28 @@
         </table>
 
         <!-- blog -->
-        <!-- <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tbody>
             <tr>
               <td style="padding:20px;width:100%;vertical-align:middle">
                 <heading>Blog</heading>
                 <p class="blog-card">
-                  [30/07/2025] &nbsp; -- &nbsp; 
-                  <img src="blog/figures/gyro/neugk_icon.png" class="blog-icon" alt="neugk Icon"> &nbsp; 
-                  <a href="blog/gyro.html"> NeuGK: 5D Neural Gyrokinetics for Efficient Plasma Turbulence Simulations</a>
+                  [04/2026] &nbsp; -- &nbsp;
+                  <a href="blog/gyaradax.html">gyaradax: Local Gyrokinetics in JAX</a>
+                </p>
+                <p class="blog-card">
+                  [02/2026] &nbsp; -- &nbsp;
+                  <a href="https://ml-jku.github.io/blog/2026/pinc/">PINC: Physics-Informed Neural Compression of Plasma Data</a>
+                </p>
+                <p class="blog-card">
+                  [11/2025] &nbsp; -- &nbsp;
+                  <a href="https://ml-jku.github.io/blog/2025/gyroswin/">GyroSwin: 5D Surrogates for Gyrokinetic Plasma Turbulence</a>
                 </p>
               </td>
             </tr>
           </tbody>
-        </table> -->
-        
+        </table>
+
         <!-- projects -->
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tbody>
@@ -153,6 +157,13 @@
                 <p>
                   <div class="row">
                     <div class="column">
+                      <div class="card">
+                        <h3 class="cardtitle">gyaradax</h3>
+                        <a class="github-button" href="https://github.com/gerkone/gyaradax" data-show-count="true" aria-label="Star gyaradax on GitHub"><code>gyaradax</code></a><br>
+                        <p>
+                          Differentiable local flux-tube gyrokinetic solver in JAX, with custom CUDA kernels.
+                        </p>
+                      </div>
 
                       <div class="card">
                         <h3 class="cardtitle">jax-sph</h3>
@@ -161,7 +172,8 @@
                           Differentiable, ML oriented Smoothed Particle Hydrodynamics (SPH) solver, using JAX.
                         </p>
                       </div>
-                      
+                    </div>
+                    <div class="column">
                       <div class="card">
                         <h3 class="cardtitle">pyTORCS</h3>
                         <a class="github-button" href="https://github.com/gerkone/pytorcs-docker" data-show-count="true" aria-label="Star gerkone/pyTORCS-docker on GitHub"><code>pyTORCS-docker</code></a><br>
@@ -170,19 +182,14 @@
                         </p>
                       </div>
 
-                    </div>
-                    <div class="column">
-
                       <div class="card">
                         <h3 class="cardtitle"> Equivariant JAX</h3>
                         <a class="github-button" href="https://github.com/gerkone/segnn-jax" data-show-count="true" aria-label="Star gerkone/segnn-jax on GitHub"><code>segnn-jax</code></a>
                         <a class="github-button" href="https://github.com/gerkone/painn-jax" data-show-count="true" aria-label="Star gerkone/painn-jax on GitHub"><code>painn-jax</code></a>
                         <a class="github-button" href="https://github.com/gerkone/egnn-jax" data-show-count="true" aria-label="Star gerkone/egnn-jax on GitHub"><code>egnn-jax</code></a><br>
-                        <p>Collection of some popular equivariant models, written in JAX. 
+                        <p>Collection of popular equivariant graph neural network models, written in JAX.
                         </p>
                       </div>
-
-
                     </div>
                   </div>
                 </p>
@@ -191,14 +198,13 @@
           </tbody>
         </table>
 
-
         <!-- footer -->
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           <tr>
             <td style="padding:0px">
                 <br>
                 <p style="text-align:left;font-size:small;">
-                  Updated <i>October 2025</i>
+                  Updated <i>April 2026</i>
                 </p>
             </td>
             <td style="padding:0px">
@@ -209,6 +215,24 @@
       </td>
     </tr>
   </table>
-</body>
 
+  <!-- theme toggle -->
+  <script>
+  function toggleTheme() {
+    var html = document.documentElement;
+    var current = html.getAttribute('data-theme');
+    var next = current === 'dark' ? 'light' : 'dark';
+    html.setAttribute('data-theme', next);
+    document.getElementById('theme-icon').innerHTML = next === 'dark' ? '&#9788;' : '&#9790;';
+    localStorage.setItem('theme', next);
+  }
+  (function() {
+    var saved = localStorage.getItem('theme');
+    if (saved) {
+      document.documentElement.setAttribute('data-theme', saved);
+      document.getElementById('theme-icon').innerHTML = saved === 'dark' ? '&#9788;' : '&#9790;';
+    }
+  })();
+  </script>
+</body>
 </html>
